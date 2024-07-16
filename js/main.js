@@ -63,7 +63,16 @@ const translations = {
         singersTitle: "Mashhur Sanatkorlar va Boshlovchilar",
         singersPrice: "Narx:",
         singersNameF: "Jahongir Otajonov",
+        singersNameDj: "Dj Piligrim",
+        singersNameRashid: "Rashid Holiqov",
+        singersNameHamdam: "Hamdam Sobirov",
+        singersNameImron: "Imron",
+        singersNameShohruhxon: "Shohruhxon",
         singers: "Sanatkorlar",
+        singersNameUlugbek: "Ulug'bek Rahmatullayev",
+        singersNameSahar: "Sahar",
+        singersNameUmarov: "Yorqinxo'ja Umarov",
+        singersNameSevara: "Sevara Nazarxon",
         groups: "Guruhlar",
         single: "Boshlovchilar",
         location: "Uzbekistan, Tashkent"
@@ -94,6 +103,15 @@ const translations = {
         singersTitle: "Известные артисты и ведущие",
         singersPrice: "Цена:",
         singersNameF: "Джахангир Отажонов",
+        singersNameDj: "Дж Пилигрим",
+        singersNameRashid: "Рашид Ҳолиқов",
+        singersNameHamdam: "Ҳамдам Собиров",
+        singersNameImron: "Имрон",
+        singersNameShohruhxon: "Шоҳруҳхон",
+        singersNameUlugbek: "Улуғбек Раҳматуллаев",
+        singersNameSahar: "Саҳар",
+        singersNameUmarov: "Ёрқинхўжа Умаров",
+        singersNameSevara: "Севара Назархон",
         singers: "Артисты",
         groups: "Дежурные",
         single: "Bедущие",
@@ -136,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Pagination
+// Pagination Hero
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
         '../assets/images/hero-img.webp',
@@ -166,88 +184,63 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Sigers
-// document.addEventListener('DOMContentLoaded', function() {
-//     const singers = [
-//         { name: 'Jahongir Otajonov', price: '3.500$', img: './assets/images/jahongir.webp' },
-//         { name: 'Dj Piligrim', price: '3.500$', img: './assets/images/jahongir.webp' },
-//         // Add more singer objects here
-//     ];
-    
-//     const itemsPerPage = 2;
-//     const singersList = document.getElementById('singersList');
-//     const pageNumbers = document.getElementById('pageNumbers');
-//     const prevButton = document.querySelector('.card__prev');
-//     const nextButton = document.querySelector('.card__next');
-//     let currentPage = 1;
+document.addEventListener('DOMContentLoaded', function() {
+    const singersList = document.getElementById('singersList');
+    const singersItems = singersList.getElementsByClassName('singers__item');
+    let itemsPerPage;
+    let currentPage = 1;
 
-//     function displayPage(page) {
-//         singersList.innerHTML = '';
-//         const start = (page - 1) * itemsPerPage;
-//         const end = start + itemsPerPage;
-//         const pageSingers = singers.slice(start, end);
+    const updateItemsPerPage = () => {
+        const screenWidth = window.innerWidth;
+        if (screenWidth <= 400) {
+            itemsPerPage = 1;
+        } else if (screenWidth <= 600) {
+            itemsPerPage = 2;
+        } else {
+            itemsPerPage = 3;
+        }
+    };
 
-//         pageSingers.forEach(singer => {
-//             const singerItem = document.createElement('li');
-//             singerItem.className = 'singers__item';
-//             singerItem.innerHTML = `
-//                 <img class="singers__img" src="${singer.img}" alt="${singer.name}" width="326" height="230">
-//                 <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameF">
-//                     ${singer.name}
-//                 </h3>
-//                 <div class="singers__price-wrapper services__date-wrapper">
-//                     <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-//                     <time class="singers__number services__time">${singer.price}</time>
-//                 </div>
-//                 <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
-//             `;
-//             singersList.appendChild(singerItem);
-//         });
+    const showPage = (page) => {
+        updateItemsPerPage();
+        const startIdx = (page - 1) * itemsPerPage;
+        const endIdx = startIdx + itemsPerPage;
 
-//         const activeButton = document.querySelector(`#pageNumbers button[data-page="${page}"]`);
-//         if (activeButton) {
-//             document.querySelectorAll('#pageNumbers button').forEach(btn => btn.classList.remove('active'));
-//             activeButton.classList.add('active');
-//         }
-//     }
+        for (let i = 0; i < singersItems.length; i++) {
+            if (i >= startIdx && i < endIdx) {
+                singersItems[i].style.display = 'block';
+                setTimeout(() => {
+                    singersItems[i].style.opacity = '1';
+                }, 50);
+            } else {
+                singersItems[i].style.opacity = '0';
+                setTimeout(() => {
+                    singersItems[i].style.display = 'none';
+                }, 300); // Match this with the CSS transition duration
+            }
+        }
+    };
 
-//     function setupPagination() {
-//         const pageCount = Math.ceil(singers.length / itemsPerPage);
-//         pageNumbers.innerHTML = '';
+    document.querySelector('.singers__prev').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+        }
+    });
 
-//         for (let i = 1; i <= pageCount; i++) {
-//             const button = document.createElement('button');
-//             button.textContent = i;
-//             button.setAttribute('data-page', i);
-//             button.addEventListener('click', () => {
-//                 currentPage = i;
-//                 displayPage(i);
-//             });
-//             if (i === 1) button.classList.add('active');
-//             pageNumbers.appendChild(button);
-//         }
-//     }
+    document.querySelector('.singers__next').addEventListener('click', () => {
+        const totalPages = Math.ceil(singersItems.length / itemsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+        }
+    });
 
-//     prevButton.addEventListener('click', () => {
-//         if (currentPage > 1) {
-//             currentPage--;
-//             displayPage(currentPage);
-//         }
-//     });
+    window.addEventListener('resize', () => {
+        showPage(currentPage);
+    });
 
-//     nextButton.addEventListener('click', () => {
-//         const pageCount = Math.ceil(singers.length / itemsPerPage);
-//         if (currentPage < pageCount) {
-//             currentPage++;
-//             displayPage(currentPage);
-//         }
-//     });
+    // Initialize the first page
+    showPage(currentPage);
+});
 
-//     displayPage(1);
-//     setupPagination();
-// });
-
-// const activeButton = document.querySelector(`#pageNumbers button[data-page="${page}"]`);
-// if (activeButton) {
-//     document.querySelectorAll('#pageNumbers button').forEach(btn => btn.classList.remove('active'));
-//     activeButton.classList.add('active');
-// }
