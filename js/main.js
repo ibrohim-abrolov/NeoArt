@@ -62,7 +62,11 @@ const translations = {
         servicesButton: "Batafsil",
         singersTitle: "Mashhur Sanatkorlar va Boshlovchilar",
         singersPrice: "Narx:",
-        singersNameF: "Jahongir Otajonov"
+        singersNameF: "Jahongir Otajonov",
+        singers: "Sanatkorlar",
+        groups: "Guruhlar",
+        single: "Boshlovchilar",
+        location: "Uzbekistan, Tashkent"
     },
     rus: {
         home: "Главная",
@@ -89,7 +93,11 @@ const translations = {
         servicesButton: "Подробнее",
         singersTitle: "Известные артисты и ведущие",
         singersPrice: "Цена:",
-        singersNameF: "Джахангир Отажонов"
+        singersNameF: "Джахангир Отажонов",
+        singers: "Артисты",
+        groups: "Дежурные",
+        single: "Bедущие",
+        location: "Узбекистан, Ташкент"
     }
 };
 
