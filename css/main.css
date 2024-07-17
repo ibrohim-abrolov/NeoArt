@@ -24,17 +24,22 @@
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url("../assets/fonts/OpenSans-ExtraBold.ttf");
-}
-
-@font-face {
     font-family: "MonteCarlo";
+    font-weight: 700;
     src: url("../assets/fonts/MonteCarlo-Regular.ttf");
 }
 
 .visually-hidden {
-    visibility: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden
 }
 
 :root {
@@ -200,7 +205,6 @@ ul {
     font-size: 18px;
     font-weight: 700;
     line-height: 20px;
-    letter-spacing: 2%;
     color: rgba(0, 0, 0, 0.7);
 }
 
@@ -226,7 +230,6 @@ ul {
     font-size: 32px;
     text-align: center;
     color: #fff500;
-    letter-spacing: 5%;
 }
 
 .hero__title {
@@ -235,7 +238,6 @@ ul {
     font-weight: 900;
     line-height: 36px;
     color: var(--main-text-color);
-    letter-spacing: 2%;
     text-align: center;
 }
 
@@ -314,7 +316,7 @@ ul {
     margin-bottom: 0;
     font-size: 14px;
     line-height: 23px;
-    font-weight: bold;
+    font-weight: 700;
     font-style: italic;
     color: var(--main-text-color);
 }
@@ -415,7 +417,6 @@ ul {
     font-size: 18px;
     font-weight: 600;
     line-height: 21px;
-    letter-spacing: 1%;
     color: var(--main-text-color);
 }
 
@@ -720,7 +721,6 @@ ul {
 
     .site-article__text {
         font-size: 16px;
-        letter-spacing: 1%;
     }
 
     .singers__img {
@@ -861,7 +861,7 @@ ul {
     .cards__number {
         font-size: 21px;
     }
-};
+}
 
 @media screen and (min-width: 1090px) {
     .cards__inner-list {
@@ -892,7 +892,7 @@ ul {
     .cards__text-wrapper {
         margin-bottom: 35px;
     }
-};
+}
 
 
 @media screen and (min-width: 1200px) {
@@ -900,7 +900,6 @@ ul {
         font-size: 36px;
         line-height: 55px;
     }
-
 
     .site-logo {
         width: 80px;
@@ -946,7 +945,7 @@ ul {
 
     .site-article {
         padding-top: 350px;
-        padding-bottom: 100px;
+        padding-bottom: 120px;
     }
 
     .site-article__text-wrapper {
@@ -1007,7 +1006,7 @@ ul {
     }
 
     .services__item {
-        max-width: 575px !important;
+        max-width: 575px;
         margin: 0;
     }
 
@@ -1114,4 +1113,10 @@ ul {
     .cards__img {
         margin: 0;
     }
-};
+
+    .site-article__img {
+        max-width: 500px;
+        width: 100%;
+        height: 600px;
+    }
+}

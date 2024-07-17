@@ -75,7 +75,8 @@ const translations = {
         singersNameSevara: "Sevara Nazarxon",
         groups: "Guruhlar",
         single: "Boshlovchilar",
-        location: "Uzbekistan, Tashkent"
+        location: "Uzbekistan, Tashkent",
+        videoTitle: "To'ylarimizdan Ajoyib Lavhalar"
     },
     rus: {
         home: "Главная",
@@ -115,7 +116,8 @@ const translations = {
         singers: "Артисты",
         groups: "Дежурные",
         single: "Bедущие",
-        location: "Узбекистан, Ташкент"
+        location: "Узбекистан, Ташкент",
+        videoTitle: "Великолепные Кадры С Наших Свадеб"
     }
 };
 
