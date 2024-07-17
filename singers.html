@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="To'y Organizatsiya">
+    <title>Neo Art</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    
+    <!--   Header start   -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__wrapper d-flex align-items-center justify-content-between">
+                <a href="./index.html">
+                    <img class="site-logo" src="./assets/images/logo.svg" alt="site logo" width="55" height="55">
+                </a>
+                <div class="site-header__middle d-flex align-items-center justify-content-between column-gap-1">
+                    <label for="languageSelect" class="sr-only"></label>
+                    <select class="site-header__select" id="languageSelect" aria-label="Language switcher">
+                        <option value="uzb"  data-country="uzb">UZB</option>
+                        <option value="rus"  data-country="rus">RUS</option>
+                    </select>
+                    <div class="site-header__country-flag">
+                        <img class="site-header__country-img" src="./assets/images/uzb.svg" alt="uzbekistan image" width="25" height="25">
+                    </div>
+                </div>
+                <button class="site-header__hamburger" id="openModal">
+                    <img src="./assets/images/btn.svg" alt="hamburger button" width="25" height="25">
+                </button>
+                <nav class="site-header__nav nav d-none">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
+                        <li class="nav__item"><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
+                        <li class="nav__item"><a class="nav__link" data-key="services" href="./singers.html">Servislar</a></li>
+                        <li class="nav__item"><a class="nav__link" data-key="contact" href="tel:+998931274444">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="myModal" class="modal">
+        <div class="modal-content shadow">
+            <span class="close" id="closeModal">&times;</span>
+            <ul class="modal-list">
+                <li><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
+                <li><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
+                <li><a class="nav__link" data-key="services" href="#">Servislar</a></li>
+                <li><a class="nav__link" data-key="contact" href="https://t.me/neort_wedding">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--   Header finish  -->
+
+    <main class="site-main">
+        <!--   Hero start   -->
+        <section class="cards">
+            <div class="container">
+                <h1 class="cards__title section-title">
+                    Mashhur O’zbek Sanatkorlari
+                </h1>
+                <div class="cards__wrapper">
+                    <ul class="cards__list">
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Jahongir Otajonov</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#"> Dj Piligrim</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Rashid Holiqov</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Hamdam Sobirov</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#"> Imron </a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Shohruhxon </a>
+                        </li>
+                    </ul>
+                    <ul class="cards__list">
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Ulug’bek Rahmatullayev</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Sahar</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Yorqinxoja Umarov</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Sevara Nazarxon</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#"> Yulduz Usmonova</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Nasiba Abdullayeva</a>
+                        </li>
+                    </ul>
+                    <ul class="cards__list">
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Ozoda Nursaidova</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Lola</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Rayhon Ganieva</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Jasmin</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">  Nilufar Usmonova</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Ziyoda</a>
+                        </li>
+                    </ul>
+                    <ul class="cards__list">
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Mavluda Asalxojayeva</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Milena Madmusayeva</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link" href="#">Dilnoza</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cards__bottom">
+                    <ul class="cards__inner-list">
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/jahongir.webp" alt="jahongir otajonov">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Jahongir Otajonov
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            3.500$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/dj.webp" alt="dj piligrim">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Dj Piligrim
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            3.500$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/rashid.webp" alt="rashid xoliqov">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Rashid Holiqov
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.500$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/hamdam.webp" alt="Hamdam Sobirov">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Hamdam Sobirov
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            800$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/imron.webp" alt="Imron">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Imron
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            800$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/xon.webp" alt="Shohruhxon">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Shohruhxon
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            800$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/ulug.webp" alt="Ulug’bek Rahmatullayev">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Ulug'bek Rahmatullayev 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            700$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/sahar.webp" alt="Sahar">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Sahar 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            600$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/yorqin.webp" alt="Umarov">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Yorqinxoja Umarov 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            500$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/sevara.webp" alt="Sevara">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Sevara Nazarxon 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            2.500$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/yulduz.webp" alt="Usmonova">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Yulduz Usmonova 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            2.500$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/nasiba.webp" alt="Nasiba">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Nasiba Abdullayeva 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.500$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/ozoda.webp" alt="Ozoda">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Ozoda Nursaidova 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.200$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/lola.webp" alt="Lola">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Lola 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.200$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/rayhon.webp" alt="Rayhon">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Rayhon Ganieva
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            800$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/jasmin.webp" alt="Jasmin">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Jasmin Eski Shahar
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            700$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/nilufar.webp" alt="Usmonova">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Nilufar Usmonova
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            600$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/ziyoda.webp" alt="Ziyoda">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Ziyoda
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            600$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/mavluda.webp" alt="Mavluda">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Mavluda Asalxojayeva
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            600$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/milena.webp" alt="Milena">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Milena Madmusayeva
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            600$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/dilnoz.webp" alt="Dilnoza">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title">
+                                        Dilnoza
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            400$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--   Hero finish   -->
+    </main>
+
+    <!--   Footer start   -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__wrapper">
+                <a href="./index.html">
+                    <img class="footer-logo" src="./assets/images/logo.svg" alt="footer logo" width="55" height="55">
+                </a>
+                <div class="site-footer__list-wrapper">
+                    <ul class="site-footer__list">
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="home" href="./index.html">
+                                Bosh Sahifa
+                            </a></li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="about" href="#">
+                                Biz Haqimizda
+                            </a></li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="services" href="#">
+                                Servislar
+                            </a></li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="contact" href="#">
+                                Kontaktlar
+                            </a></li>
+                    </ul>
+                    <ul class="site-footer__list">
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="singers" href="./singers.html">
+                                Sanatkorlar
+                            </a></li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="single" href="./controller.html">
+                                Boshlovchilar
+                            </a></li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="groups" href="./groups.html">
+                                Guruhlar
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__inner">
+                    <div class="site-footer__socials">
+                        <a href="https://www.instagram.com/neoart_wedding" target="_blank"><img src="./assets/images/Instagram.webp" alt="instagram" width="24" height="24"></a>
+                        <a href="https://www.telegram.com/yourusername" target="_blank"><img src="./assets/images/Telegram-App.webp" alt="telegram" width="24" height="24"></a>
+                        <a href="https://www.facebook.com/yourusername" target="_blank"><img src="./assets/images/Facebook-F.webp" alt="facebook" width="24" height="24"></a>
+                        <a href="https://www.youtube.com/yourusername" target="_blank"><img src="./assets/images/YouTube.webp" alt="youtube" width="24" height="24"></a>
+                    </div>
+                    <div class="site-footer__main d-flex flex-column column-gap-1">
+                        <a class="site-footer__number" href="tel:+998949301111">
+                            +998 (94) 930-11-11
+                        </a>
+                        <a class="site-footer__number" href="tel:+998931274444">
+                            +998 (93) 127-44-44
+                        </a>
+                        <div class="site-footer__last d-flex align-items-center">
+                            <img src="./assets/images/location.svg" alt="location pin">
+                            <span class="site-footer__location translatable" data-key="location">
+                                Uzbekistan, Tashkent
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--   Footer finish   -->
+    
+    <script src="./js/singers.js"></script>
+</body>
+</html>
