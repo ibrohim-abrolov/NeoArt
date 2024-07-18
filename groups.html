@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="To'y Organizatsiya">
+    <title>Neo Art Guruhlar Page</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    
+    <!--   Header start   -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__wrapper d-flex align-items-center justify-content-between">
+                <a href="./index.html">
+                    <img class="site-logo" src="./assets/images/logo.svg" alt="site logo" width="55" height="55">
+                </a>
+                <div class="site-header__middle d-flex align-items-center justify-content-between column-gap-1">
+                    <label for="languageSelect" class="sr-only"></label>
+                    <select class="site-header__select" id="languageSelect" aria-label="Language switcher">
+                        <option value="uzb"  data-country="uzb">UZB</option>
+                        <option value="rus"  data-country="rus">RUS</option>
+                    </select>
+                    <div class="site-header__country-flag">
+                        <img class="site-header__country-img" src="./assets/images/uzb.svg" alt="uzbekistan image" width="25" height="25">
+                    </div>
+                </div>
+                <button class="site-header__hamburger" id="openModal">
+                    <img src="./assets/images/btn.svg" alt="hamburger button" width="25" height="25">
+                </button>
+                <nav class="site-header__nav nav d-none">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
+                        <li class="nav__item"><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
+                        <li class="nav__item"><a class="nav__link" data-key="services" href="./singers.html">Servislar</a></li>
+                        <li class="nav__item"><a class="nav__link" data-key="contact" href="tel:+998931274444">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="myModal" class="modal">
+        <div class="modal-content shadow">
+            <span class="close" id="closeModal">&times;</span>
+            <ul class="modal-list">
+                <li><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
+                <li><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
+                <li><a class="nav__link" data-key="services" href="#">Servislar</a></li>
+                <li><a class="nav__link" data-key="contact" href="https://t.me/neort_wedding">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--   Header finish  -->
+
+    <main class="site-main">
+        <!--   Hero start   -->
+        <section class="cards">
+            <div class="container">
+                <h1 class="cards__title section-title translatable" data-key="cardsThirdTitle">
+                    Mashxur O’zbek To'y Guruhlari
+                </h1>
+                <h2 class="visually-hidden">Good Groups</h2>
+                <div class="cards__wrapper">
+                    <ul class="cards__list">
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="shouBrand" href="#">Shou Brend</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="fano" href="#">Fano</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="chinorBrand" href="#">Chinor Brend</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="matin" href="#">Matin</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="sharqoniy" href="#">Sharqoniy</a>
+                        </li>
+                    </ul>
+                    <ul class="cards__list">
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="karavan" href="#">Karavan</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="jasmin" href="#">Jasmin Eski Shahar</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="viaSharq" href="#">Via Sharq</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="oazis" href="#">Oazis</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="eldido" href="#">Eldido</a>
+                        </li>
+                    </ul>
+                    <ul class="cards__list">
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="london" href="#">London</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="zaxida" href="#">Zaxida</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="farruhAhmedov" href="#">Farruh Axmedov</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="viaMajor" href="#">Via Major</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="toj" href="#">Toj</a>
+                        </li>
+                    </ul>
+                    <ul class="cards__list">
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="poytaxt" href="#">Poytaxt</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="dimash" href="#">Dimash</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="farruxFazel" href="#">Farrux Fazel</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cards__bottom">
+                    <ul class="cards__inner-list">
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/shou-brand.webp" alt="image of brand">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="shouBrand">
+                                        Shou Brend
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            2000$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/fano.webp" alt="image of fano">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="fano">
+                                        Fano
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.500$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/xhinor.webp" alt="image of chinor Brand">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="chinorBrand">
+                                        Chinor Brend
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.400$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/matin.webp" alt="image of Matin">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="matin">
+                                        Matin
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.500$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/sharqoniy.webp" alt="image of Sharqoniy">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="sharqoniy">
+                                        Sharqoniy
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.400$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/poytaxt.webp" alt="image of Poytaxt">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="poytaxt">
+                                        Poytaxt
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1000$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/karavan.webp" alt="image of Karavan">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="karavan">
+                                        Karavan 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.200$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/eski-shahar.webp" alt="image of Jasmin">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="eskiShahar">
+                                        Jasmin Eski Shahar 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.800$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/via-sharq.webp" alt="image of Via Sharq">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="viaSharq">
+                                        Via Sharq
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.500$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/oazis.webp" alt="image of Oazis">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="oazis">
+                                        Oazis 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1000$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/eldido.webp" alt="image of Eldido">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="eldido">
+                                        Eldido 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            900$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/london.webp" alt="image of London">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="london">
+                                        London 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            800$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/zaxida.webp" alt="image of Zaxida">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="zaxida">
+                                        Zaxida 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1000$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/farruh-axmedov.webp" alt="image of Farrux">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="farruxAhmedov">
+                                        Farrux Ahmedov 
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            600$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/via-major.webp" alt="image of via-major">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="viaMajor">
+                                        Via Major
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            600$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/toj.webp" alt="image of Toj">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="toj">
+                                        Toj
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1.200$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/fazel.webp" alt="image of farruxFazel">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="farruxFazel">
+                                        Farrux Fazel
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            1000$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__inner-item">
+                            <div class="cards__inner-wrapper">
+                                <img class="cards__img" src="./assets/images/dimash.webp" alt="image of Dimash">
+                                <div class="cards__main">
+                                    <h3 class="cards__inner-title translatable" data-key="dimash">
+                                        Dimash
+                                    </h3>
+                                    <div class="cards__text-wrapper mb-3">
+                                        <span class="cards__format translatable" data-key="weddingFormat">
+                                            Tadbir Formati
+                                        </span>
+                                        <p class="cards__text translatable" data-key="wedding">
+                                            To'y
+                                        </p>
+                                    </div>
+                                    <div class="cards__price-wrapper">
+                                        <p class="cards__price translatable" data-key="price">
+                                            Narx:
+                                        </p>
+                                        <span class="cards__number">
+                                            600$
+                                        </span>
+                                    </div>
+                                    <a class="cards__number-link services__btn translatable" data-key="buttonOrder" href="tel:+998931274444">
+                                        Buyurtma
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--   Hero finish   -->
+    </main>
+
+    <!--   Footer start   -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__wrapper">
+                <a href="./index.html">
+                    <img class="footer-logo" src="./assets/images/logo.svg" alt="footer logo" width="55" height="55">
+                </a>
+                <div class="site-footer__list-wrapper">
+                    <ul class="site-footer__list">
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="home" href="./index.html">
+                                Bosh Sahifa
+                            </a></li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="about" href="#">
+                                Biz Haqimizda
+                            </a></li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="services" href="#">
+                                Servislar
+                            </a></li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="contact" href="#">
+                                Kontaktlar
+                            </a></li>
+                    </ul>
+                    <ul class="site-footer__list">
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="singers" href="./singers.html">
+                                Sanatkorlar
+                            </a></li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="single" href="./controller.html">
+                                Boshlovchilar
+                            </a></li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link translatable" data-key="groups" href="./groups.html">
+                                Guruhlar
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__inner">
+                    <div class="site-footer__socials">
+                        <a href="https://www.instagram.com/neoart_wedding" target="_blank"><img src="./assets/images/Instagram.webp" alt="instagram" width="24" height="24"></a>
+                        <a href="https://www.telegram.com/yourusername" target="_blank"><img src="./assets/images/Telegram-App.webp" alt="telegram" width="24" height="24"></a>
+                        <a href="https://www.facebook.com/yourusername" target="_blank"><img src="./assets/images/Facebook-F.webp" alt="facebook" width="24" height="24"></a>
+                        <a href="https://www.youtube.com/yourusername" target="_blank"><img src="./assets/images/YouTube.webp" alt="youtube" width="24" height="24"></a>
+                    </div>
+                    <div class="site-footer__main d-flex flex-column column-gap-1">
+                        <a class="site-footer__number" href="tel:+998949301111">
+                            +998 (94) 930-11-11
+                        </a>
+                        <a class="site-footer__number" href="tel:+998931274444">
+                            +998 (93) 127-44-44
+                        </a>
+                        <div class="site-footer__last d-flex align-items-center">
+                            <img src="./assets/images/location.svg" alt="location pin">
+                            <span class="site-footer__location translatable" data-key="location">
+                                Uzbekistan, Tashkent
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--   Footer finish   -->
+    
+    <script src="./js/singers.js"></script>
+</body>
+</html>

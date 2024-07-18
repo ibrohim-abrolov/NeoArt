@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
-    
+<body>    
     <!--  Site Header start   -->
     <header class="site-header">
         <div class="container">
@@ -35,7 +34,14 @@
                     <ul class="nav__list">
                         <li class="nav__item"><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
                         <li class="nav__item"><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
-                        <li class="nav__item"><a class="nav__link" data-key="services" href="#">Servislar</a></li>
+                        <li class="nav__item dropdown">
+                            <a class="nav__link dropdown-toggle" data-key="services" href="#" id="navbarDropdown" role="button">Servislar</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./singers.html">Sanatkorlar</a>
+                                <a class="dropdown-item" href="./controller.html">Boshlovchilar</a>
+                                <a class="dropdown-item" href="./groups.html">Guruhlar</a>
+                            </div>
+                        </li>
                         <li class="nav__item"><a class="nav__link" data-key="contact" href="https://t.me/neort_wedding">Kontakt</a></li>
                     </ul>
                 </nav>
@@ -277,7 +283,7 @@
                         </h3>
                         <div class="singers__price-wrapper services__date-wrapper">
                             <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-                            <span class="singers__number services__time">800$</span>
+                            <span class="singers__number services__time">1000$</span>
                         </div>
                         <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
                     </li>

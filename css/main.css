@@ -37,9 +37,8 @@
     padding: 0;
     border: 0;
     white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden
+    clip-path: inset(50%);
+    overflow: hidden;
 }
 
 :root {
@@ -171,6 +170,20 @@ ul {
     transition: opacity 0.5s ease-in-out
 }
 
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none; 
+}
+
+.dropdown-item {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+}
+        
 
 /* Modal Navbar */
 .modal {
@@ -212,7 +225,7 @@ ul {
     font-size: 35px;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.9);
-    transform: translateX(190px);
+    transform: translateX(160px);
 }
 
 .close:hover,
@@ -331,12 +344,13 @@ ul {
 
 .site-article__link {
     display: block;
-    max-width: 165px;
+    max-width: 175px;
     width: 100%;
     margin: 0 auto 25px auto;
     padding: 8px 15px;
     font-size: 14px;
     font-weight: 700;
+    text-align: center;
     color: var(--main-text-color);
     background-color: rgba(255, 245, 0, 0.7);
     text-decoration-line: none;
@@ -585,6 +599,13 @@ ul {
     margin-top: 30px;
 }
 
+.cards__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .cards__link {
     display: block;
     font-size: 16px;
@@ -652,7 +673,7 @@ ul {
     font-style: italic;
     text-align: center;
     color: var(--main-text-color);
-    /* transform: translateX(210px); */
+    transform: translateX(50px);
 }
 
 .cards__price-wrapper {
@@ -924,7 +945,10 @@ ul {
     .nav__link {
         font-size: 19px;
         line-height: 25px;
-        letter-spacing: 2%;
+    }
+
+    .dropdown-item {
+        font-size: 18px;
     }
 
     .hero__title-wrapper {
@@ -936,7 +960,6 @@ ul {
     .hero__title {
         font-size: 48px;
         line-height: 60px;
-        letter-spacing: 4%;
     } 
 
     .hero__text-wrapper {
@@ -959,7 +982,7 @@ ul {
     }
 
     .site-article__link {
-        max-width: 190px;
+        max-width: 195px;
         padding: 8px 25px;
         font-size: 15px;
         transition: opacity 0.5s ease;
@@ -976,7 +999,6 @@ ul {
     .site-article__name {
         font-size: 16px;
         line-height: 26px;
-        letter-spacing: 4%;
     }
 
     .site-article__link:hover {
@@ -1002,6 +1024,7 @@ ul {
     }
 
     .services__list {
+        justify-content: space-between;
         row-gap: 20px;
     }
 
@@ -1069,7 +1092,7 @@ ul {
     }
 
     .cards__list {
-        column-gap: 10px;
+        row-gap: 10px;
     }
 
     .cards {

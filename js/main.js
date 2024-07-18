@@ -1,3 +1,26 @@
+// Dropdown
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.dropdown-toggle').forEach(dropdownToggle => {
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            const dropdownMenu = dropdownToggle.nextElementSibling;
+            dropdownMenu.classList.toggle('show');
+        });
+    });
+
+    // Close the dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('.dropdown-toggle')) {
+            document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                menu.classList.remove('show');
+            });
+        }
+    });
+});
+
+
+
+// Modal
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('openModal').addEventListener('click', function() {
         document.getElementById('myModal').style.display = 'block';
