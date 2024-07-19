@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <div id="preloader"></div>
     
     <!--   Header start   -->
     <header class="site-header">
@@ -35,7 +36,14 @@
                     <ul class="nav__list">
                         <li class="nav__item"><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
                         <li class="nav__item"><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
-                        <li class="nav__item"><a class="nav__link" data-key="services" href="./singers.html">Servislar</a></li>
+                        <li class="nav__item dropdown">
+                            <a class="nav__link dropdown-toggle" data-key="services" href="#" id="navbarDropdown" role="button">Servislar</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item translatable" data-key="singers" href="./singers.html">Sanatkorlar</a>
+                                <a class="dropdown-item translatable" data-key="single" href="./controller.html">Boshlovchilar</a>
+                                <a class="dropdown-item translatable" data-key="groups" href="./groups.html">Guruhlar</a>
+                            </div>
+                        </li>
                         <li class="nav__item"><a class="nav__link" data-key="contact" href="tel:+998931274444">Kontakt</a></li>
                     </ul>
                 </nav>
@@ -66,70 +74,70 @@
                 <div class="cards__wrapper">
                     <ul class="cards__list">
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="shouBrand" href="#">Shou Brend</a>
+                            <a class="cards__link translatable" data-key="shouBrand" href="#shou-brend">Shou Brend</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="fano" href="#">Fano</a>
+                            <a class="cards__link translatable" data-key="fano" href="#fano">Fano</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="chinorBrand" href="#">Chinor Brend</a>
+                            <a class="cards__link translatable" data-key="chinorBrand" href="#chinor-brend">Chinor Brend</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="matin" href="#">Matin</a>
+                            <a class="cards__link translatable" data-key="matin" href="#matin">Matin</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="sharqoniy" href="#">Sharqoniy</a>
-                        </li>
-                    </ul>
-                    <ul class="cards__list">
-                        <li class="cards__item">
-                            <a class="cards__link translatable" data-key="karavan" href="#">Karavan</a>
-                        </li>
-                        <li class="cards__item">
-                            <a class="cards__link translatable" data-key="jasmin" href="#">Jasmin Eski Shahar</a>
-                        </li>
-                        <li class="cards__item">
-                            <a class="cards__link translatable" data-key="viaSharq" href="#">Via Sharq</a>
-                        </li>
-                        <li class="cards__item">
-                            <a class="cards__link translatable" data-key="oazis" href="#">Oazis</a>
-                        </li>
-                        <li class="cards__item">
-                            <a class="cards__link translatable" data-key="eldido" href="#">Eldido</a>
+                            <a class="cards__link translatable" data-key="sharqoniy" href="#sharqoniy">Sharqoniy</a>
                         </li>
                     </ul>
                     <ul class="cards__list">
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="london" href="#">London</a>
+                            <a class="cards__link translatable" data-key="karavan" href="#karavan">Karavan</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="zaxida" href="#">Zaxida</a>
+                            <a class="cards__link translatable" data-key="jasmin" href="#jasmin-eski-shahar">Jasmin Eski Shahar</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="farruhAhmedov" href="#">Farruh Axmedov</a>
+                            <a class="cards__link translatable" data-key="viaSharq" href="#via-sharq">Via Sharq</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="viaMajor" href="#">Via Major</a>
+                            <a class="cards__link translatable" data-key="oazis" href="#oazis">Oazis</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="toj" href="#">Toj</a>
+                            <a class="cards__link translatable" data-key="eldido" href="#eldido">Eldido</a>
                         </li>
                     </ul>
                     <ul class="cards__list">
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="poytaxt" href="#">Poytaxt</a>
+                            <a class="cards__link translatable" data-key="london" href="#london">London</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="dimash" href="#">Dimash</a>
+                            <a class="cards__link translatable" data-key="zaxida" href="#zaxida">Zaxida</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="farruxFazel" href="#">Farrux Fazel</a>
+                            <a class="cards__link translatable" data-key="farruhAhmedov" href="#farruh-ahmedov">Farruh Axmedov</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="viaMajor" href="#via-major">Via Major</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="toj" href="#toj">Toj</a>
+                        </li>
+                    </ul>
+                    <ul class="cards__list">
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="poytaxt" href="#poytaxt">Poytaxt</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="dimash" href="#dimash">Dimash</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="farruxFazel" href="#fazel">Farrux Fazel</a>
                         </li>
                     </ul>
                 </div>
                 <div class="cards__bottom">
                     <ul class="cards__inner-list">
-                        <li class="cards__inner-item">
+                        <li id="shou-brend" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/shou-brand.webp" alt="image of brand">
                                 <div class="cards__main">
@@ -158,7 +166,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="fano" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/fano.webp" alt="image of fano">
                                 <div class="cards__main">
@@ -187,7 +195,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="chinor-brend" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/xhinor.webp" alt="image of chinor Brand">
                                 <div class="cards__main">
@@ -216,7 +224,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="matin" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/matin.webp" alt="image of Matin">
                                 <div class="cards__main">
@@ -245,7 +253,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="sharqoniy" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/sharqoniy.webp" alt="image of Sharqoniy">
                                 <div class="cards__main">
@@ -274,7 +282,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="poytaxt" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/poytaxt.webp" alt="image of Poytaxt">
                                 <div class="cards__main">
@@ -303,7 +311,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="karavan" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/karavan.webp" alt="image of Karavan">
                                 <div class="cards__main">
@@ -332,7 +340,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="jasmin-eski-shahar" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/eski-shahar.webp" alt="image of Jasmin">
                                 <div class="cards__main">
@@ -361,7 +369,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="via-sharq" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/via-sharq.webp" alt="image of Via Sharq">
                                 <div class="cards__main">
@@ -390,7 +398,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="oazis" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/oazis.webp" alt="image of Oazis">
                                 <div class="cards__main">
@@ -419,7 +427,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="eldido" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/eldido.webp" alt="image of Eldido">
                                 <div class="cards__main">
@@ -448,7 +456,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="london" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/london.webp" alt="image of London">
                                 <div class="cards__main">
@@ -477,7 +485,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="zaxida" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/zaxida.webp" alt="image of Zaxida">
                                 <div class="cards__main">
@@ -506,7 +514,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="farruh-ahmedov" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/farruh-axmedov.webp" alt="image of Farrux">
                                 <div class="cards__main">
@@ -535,7 +543,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="via-major" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/via-major.webp" alt="image of via-major">
                                 <div class="cards__main">
@@ -564,7 +572,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="toj" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/toj.webp" alt="image of Toj">
                                 <div class="cards__main">
@@ -593,7 +601,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="fazel" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/fazel.webp" alt="image of farruxFazel">
                                 <div class="cards__main">
@@ -622,7 +630,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="dimash" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/dimash.webp" alt="image of Dimash">
                                 <div class="cards__main">

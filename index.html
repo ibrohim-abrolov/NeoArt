@@ -10,431 +10,564 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>    
-    <!--  Site Header start   -->
+    <div id="preloader"></div>
+    <!--   Header start   -->
     <header class="site-header">
-        <div class="container">
-            <div class="site-header__wrapper d-flex align-items-center justify-content-between">
-                <a href="./index.html">
-                    <img class="site-logo" src="./assets/images/logo.svg" alt="site logo" width="55" height="55">
-                </a>
-                <div class="site-header__middle d-flex align-items-center justify-content-between column-gap-1">
-                    <label for="languageSelect" class="sr-only"></label>
-                    <select class="site-header__select" id="languageSelect" aria-label="Language switcher">
-                        <option value="uzb"  data-country="uzb">UZB</option>
-                        <option value="rus"  data-country="rus">RUS</option>
-                    </select>
-                    <div class="site-header__country-flag">
-                        <img class="site-header__country-img" src="./assets/images/uzb.svg" alt="uzbekistan image" width="25" height="25">
+            <div class="container">
+                <div class="site-header__wrapper d-flex align-items-center justify-content-between">
+                    <a href="./index.html">
+                        <img class="site-logo" src="./assets/images/logo.svg" alt="site logo" width="55" height="55">
+                    </a>
+                    <div class="site-header__middle d-flex align-items-center justify-content-between column-gap-1">
+                        <label for="languageSelect" class="sr-only"></label>
+                        <select class="site-header__select" id="languageSelect" aria-label="Language switcher">
+                            <option value="uzb"  data-country="uzb">UZB</option>
+                            <option value="rus"  data-country="rus">RUS</option>
+                        </select>
+                        <div class="site-header__country-flag">
+                            <img class="site-header__country-img" src="./assets/images/uzb.svg" alt="uzbekistan image" width="25" height="25">
+                        </div>
                     </div>
+                    <button class="site-header__hamburger" id="openModal">
+                        <img src="./assets/images/btn.svg" alt="hamburger button" width="25" height="25">
+                    </button>
+                    <nav class="site-header__nav nav d-none">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
+                            <li class="nav__item"><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
+                            <li class="nav__item dropdown">
+                                <a class="nav__link dropdown-toggle" data-key="services" href="#" id="navbarDropdown" role="button">Servislar</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item translatable" data-key="singers" href="./singers.html">Sanatkorlar</a>
+                                    <a class="dropdown-item translatable" data-key="single" href="./controller.html">Boshlovchilar</a>
+                                    <a class="dropdown-item translatable" data-key="groups" href="./groups.html">Guruhlar</a>
+                                </div>
+                            </li>
+                            <li class="nav__item"><a class="nav__link" data-key="contact" href="https://t.me/neort_wedding">Kontakt</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <button class="site-header__hamburger" id="openModal">
-                    <img src="./assets/images/btn.svg" alt="hamburger button" width="25" height="25">
-                </button>
-                <nav class="site-header__nav nav d-none">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
-                        <li class="nav__item"><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
-                        <li class="nav__item dropdown">
-                            <a class="nav__link dropdown-toggle" data-key="services" href="#" id="navbarDropdown" role="button">Servislar</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./singers.html">Sanatkorlar</a>
-                                <a class="dropdown-item" href="./controller.html">Boshlovchilar</a>
-                                <a class="dropdown-item" href="./groups.html">Guruhlar</a>
-                            </div>
-                        </li>
-                        <li class="nav__item"><a class="nav__link" data-key="contact" href="https://t.me/neort_wedding">Kontakt</a></li>
-                    </ul>
-                </nav>
             </div>
-        </div>
     </header>
     <div id="myModal" class="modal">
-        <div class="modal-content shadow">
-            <span class="close" id="closeModal">&times;</span>
-            <ul class="modal-list">
-                <li><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
-                <li><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
-                <li><a class="nav__link" data-key="services" href="#">Servislar</a></li>
-                <li><a class="nav__link" data-key="contact" href="https://t.me/neort_wedding">Kontakt</a></li>
-            </ul>
-        </div>
+            <div class="modal-content shadow">
+                <span class="close" id="closeModal">&times;</span>
+                <ul class="modal-list">
+                    <li><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
+                    <li><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
+                    <li><a class="nav__link" data-key="services" href="#">Servislar</a></li>
+                    <li><a class="nav__link" data-key="contact" href="https://t.me/neort_wedding">Kontakt</a></li>
+                </ul>
+            </div>
     </div>
     <!--   Header finish  -->
-
+    
     <main class="site-main">
-        <div class="background-image"></div>
-        <!--   Hero start   -->
-        <section class="hero pt-5">
-            <div class="container">
-                <div class="hero__wrapper d-flex align-items-center justify-content-center column-gap-3">
-                    <img src="./assets/images/line-yellow.svg" alt="line image" width="45" height="1">
-                    <span class="hero__span">
-                        Neo Art
-                    </span>
-                    <img src="./assets/images/line-yellow.svg" alt="line image" width="45" height="1">
+            <div class="background-image"></div>
+            <!--   Hero start   -->
+            <section class="hero pt-5">
+                <div class="container">
+                    <div class="hero__wrapper d-flex align-items-center justify-content-center column-gap-3">
+                        <img src="./assets/images/line-yellow.svg" alt="line image" width="45" height="1">
+                        <span class="hero__span">
+                            Neo Art
+                        </span>
+                        <img src="./assets/images/line-yellow.svg" alt="line image" width="45" height="1">
+                    </div>
+                    <div class="hero__title-wrapper">
+                        <h1 class="hero__title translatable" data-key="heroTitle">
+                            NeoArt Event Organizatsiyasi sizning baxtli kuningiz uchun
+                        </h1>
+                    </div>
+                    <div class="hero__text-wrapper">
+                        <p class="hero__text translatable" data-key="heroText">
+                            Maxsus kuningizni bizning tajribamizga ishonib topshiring. Mukammal va xursandchilikka to'la to'y marosimingiz uchun xizmatlarimizni buyurtma qiling.
+                        </p>
+                    </div>
+                    <a class="hero__btn translatable" href="tel:+998949301111" data-key="button">
+                        Buyurtma Berish
+                    </a>
                 </div>
-                <div class="hero__title-wrapper">
-                    <h1 class="hero__title translatable" data-key="heroTitle">
-                        NeoArt Event Organizatsiyasi sizning baxtli kuningiz uchun
-                    </h1>
-                </div>
-                <div class="hero__text-wrapper">
-                    <p class="hero__text translatable" data-key="heroText">
-                        Maxsus kuningizni bizning tajribamizga ishonib topshiring. Mukammal va xursandchilikka to'la to'y marosimingiz uchun xizmatlarimizni buyurtma qiling.
-                    </p>
-                </div>
-                <a class="hero__btn translatable" href="tel:+998949301111" data-key="button">
-                    Buyurtma Berish
-                </a>
-            </div>
-        </section>
-        <!--   Hero finish   -->
+            </section>
+            <!--   Hero finish   -->
 
-        <!-- Site Article start -->
-        <article class="site-article">
-            <div class="container">
-                <h1 class="visually-hidden">This is Article</h1>
-                <div class="site-article__wrapper">
-                    <div class="site-article__inner">
-                        <h2 class="site-article__title section-title translatable" data-key="articleTitle">
-                            Organizatsiya Haqida
-                        </h2>
-                        <div class="site-article__text-wrapper">
-                            <p class="site-article__text translatable" data-key="articleText">
-                                Bizning to'y organizatsiya veb-saytimizga xush kelibsiz, biz siz bilan maxsus kunimizni nishonlashni kuta olmaymiz. Biz ushbu veb-saytni to'yimiz oldidan barcha muhim tafsilotlarni siz bilan baham ko'rishning qulay va interaktiv usuli sifatida yaratdik.Nihoyat - doimiy hurmat va qo'llab-quvvatlaganingiz uchun tashakkur. Biz bu kunni siz bilan baham ko'rishdan juda xursandmiz va siz uchun eng yaxshi kunni nishonlashni orziqib kutamiz.
-                            </p>
-                            <p class="site-article__text translatable" data-key="articleTextSecond">
-                                Neo Art jamoasiga 2019 yilning 15-Avgust sanasida “Ahmedjanov  Samandar" boshchiligida asos solindi.  Bizning jamoa maqsadi odamlarga ularning eng yahshi kunida xizmat korsatishva esda qolarlik taassurotlar yaratish. Hurmat bilan NeoArt.
-                            </p>
-                            <a class="site-article__link translatable" data-key="button" href="https://t.me/neoart_wedding">
-                                Buyurtma Berish
-                            </a>
+            <!-- Site Article start -->
+            <article class="site-article">
+                <div class="container">
+                    <h1 class="visually-hidden">This is Article</h1>
+                    <div class="site-article__wrapper">
+                        <div class="site-article__inner">
+                            <h2 class="site-article__title section-title translatable" data-key="articleTitle">
+                                Organizatsiya Haqida
+                            </h2>
+                            <div class="site-article__text-wrapper">
+                                <p class="site-article__text translatable" data-key="articleText">
+                                    Bizning to'y organizatsiya veb-saytimizga xush kelibsiz, biz siz bilan maxsus kunimizni nishonlashni kuta olmaymiz. Biz ushbu veb-saytni to'yimiz oldidan barcha muhim tafsilotlarni siz bilan baham ko'rishning qulay va interaktiv usuli sifatida yaratdik.Nihoyat - doimiy hurmat va qo'llab-quvvatlaganingiz uchun tashakkur. Biz bu kunni siz bilan baham ko'rishdan juda xursandmiz va siz uchun eng yaxshi kunni nishonlashni orziqib kutamiz.
+                                </p>
+                                <p class="site-article__text translatable" data-key="articleTextSecond">
+                                    Neo Art jamoasiga 2019 yilning 15-Avgust sanasida “Ahmedjanov  Samandar" boshchiligida asos solindi.  Bizning jamoa maqsadi odamlarga ularning eng yahshi kunida xizmat korsatishva esda qolarlik taassurotlar yaratish. Hurmat bilan NeoArt.
+                                </p>
+                                <a class="site-article__link translatable" data-key="button" href="https://t.me/neoart_wedding">
+                                    Buyurtma Berish
+                                </a>
+                            </div>
+                        </div>
+                        <div class="site-article__outer">
+                            <picture class="site-header__country-img">
+                                <source media="(min-width: 1200px)" srcset="./assets/images/founder.webp" class="founder desktop image">
+                                <img class="site-article__img" src="./assets/images/founder-mob.webp" alt="founder mobile image" width="350" height="250">
+                            </picture>
+                            <div class="site-article__name-wrapper">
+                                <span class="site-article__span translatable" data-key="founder">Asoschi:</span>
+                                <p class="site-article__name translatable" data-key="userName"> Samandar Ahmedjanov</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="site-article__outer">
-                        <picture class="site-header__country-img">
-                            <source media="(min-width: 1200px)" srcset="./assets/images/founder.webp" class="founder desktop image">
-                            <img class="site-article__img" src="./assets/images/founder-mob.webp" alt="founder mobile image" width="350" height="250">
-                        </picture>
-                        <div class="site-article__name-wrapper">
-                            <span class="site-article__span translatable" data-key="founder">Asoschi:</span>
-                            <p class="site-article__name translatable" data-key="userName"> Samandar Ahmedjanov</p>
-                        </div>         
+                </div>
+            </article>
+            <!-- Site Article finish -->
+
+            <!-- Video -->
+            <section class="video">
+                <div class="container">
+                    <h1 class="visually-hidden">Video Section</h1>
+                    <h2 class="video__title section-title translatable" data-key="videoTitle">To'ylarimizdan Ajoyib Lavhalar</h2>
+                        <video class="video__self" controls>
+                            <source src="./assets/videos/xxx.mp4" type="video/mp4">
+                        </video>
+                </div>
+            </section>
+            <!-- Video -->
+
+            <!-- Services start -->
+            <!-- <section class="services">
+                <div class="container">
+                    <h1 class="visually-hidden">Service section</h1>
+                    <h2 class="services__title section-title translatable" data-key="servicesTitle">
+                        Servislar Haqida
+                    </h2>
+                    <ul class="services__list">
+                        <li class="services__item">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="./assets/images/shohsaroy.webp" class="shohsaroy hall" widt="580" height="200">
+                                <img class="services__img" src="./assets/images/shohsaroy-mob.webp" alt="shohsaroy hall mob" width="362" height="160">
+                            </picture>
+                            <h3 class="services__inner-title translatable" data-key="servicesShohsaroy">
+                                Shohsaroy To'yxona
+                            </h3>
+                            <div class="services__date-wrapper">
+                                <span class="services__span services-main translatable" data-key="date">Sana:</span>
+                                <time class="services__time" datetime="2024-06-22">22.05.2024</time>
+                            </div>
+                            <div class="services__wrapper">
+                                <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
+                                <div class="d-flex align-items-center column-gap-1">
+                                    <p class="services__text">Neo Art</p>
+                                    <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
+                                </div>
+                            </div>
+                            <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
+                        </li>
+                        <li class="services__item">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="./assets/images/yakkasaroy.webp" class="yakkasaroy hall" widt="580" height="200">
+                                <img class="services__img" src="./assets/images/yakkasaroy-mob.webp" alt="yakkasaroy hall mob" width="360" height="160">
+                            </picture>
+                            <h3 class="services__inner-title translatable" data-key="servicesYakkasaroy">
+                                Yakkasaroy To'yxona
+                            </h3>
+                            <div class="services__date-wrapper">
+                                <span class="services__span services-main translatable" data-key="date">Sana:</span>
+                                <time class="services__time" datetime="2020-10-22">22.10.2020</time>
+                            </div>
+                            <div class="services__wrapper">
+                                <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
+                                <div class="d-flex align-items-center column-gap-1">
+                                    <p class="services__text">Neo Art</p>
+                                    <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
+                                </div>
+                            </div>
+                            <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
+                        </li>
+                        <li class="services__item">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="./assets/images/versal.webp" class="versal hall" widt="580" height="200">
+                                <img class="services__img" src="./assets/images/versal-mob.webp" alt="versal hall mobile" width="360" height="160">
+                            </picture>
+                            <h3 class="services__inner-title translatable" data-key="servicesVersal">
+                                Versal To'yxona
+                            </h3>
+                            <div class="services__date-wrapper">
+                                <span class="services__span services-main translatable" data-key="date">Sana:</span>
+                                <time class="services__time" datetime="2019-07-12">12.07.2019</time>
+                            </div>
+                            <div class="services__wrapper">
+                                <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
+                                <div class="d-flex align-items-center column-gap-1">
+                                    <p class="services__text">Neo Art</p>
+                                    <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
+                                </div>
+                            </div>
+                            <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
+                        </li>
+                        <li class="services__item">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="./assets/images/mumtoz.webp" class="mumtoz hall" widt="580" height="200">
+                                <img class="services__img" src="./assets/images/mumtoz-mob.webp" alt="mumtoz hall mob" width="360" height="160">
+                            </picture>
+                            <h3 class="services__inner-title translatable" data-key="servicesMumtoz">
+                                Mumtoz To'yxona
+                            </h3>
+                            <div class="services__date-wrapper">
+                                <span class="services__span services-main translatable" data-key="date">Sana:</span>
+                                <time class="services__time" datetime="2024-01-09">09.01.2022</time>
+                            </div>
+                            <div class="services__wrapper">
+                                <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
+                                <div class="d-flex align-items-center column-gap-1">
+                                    <p class="services__text">Neo Art</p>
+                                    <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
+                                </div>
+                            </div>
+                            <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
+                        </li>
+                    </ul>
+                </div>
+            </section> -->
+            <!-- Services finish -->
+
+            <section class="services">
+                <div class="container">
+                    <h1 class="visually-hidden">Service section</h1>
+                    <h2 class="services__title section-title translatable" data-key="servicesTitle">
+                        Servislar Haqida
+                    </h2>
+                    <ul class="services__list">
+                        <li class="services__item">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" srcset="./assets/images/kortej.webp" class="shohsaroy hall" width="577" height="200">
+                                            <img class="services__img" src="./assets/images/kortej-mob.webp" alt="shohsaroy hall mob" width="362" height="160">
+                                        </picture>
+                                        <h3 class="services__inner-title translatable" data-key="servicesKortej">Kortej Hizmati</h3>
+                                        <div class="services__date-wrapper">
+                                            <span class="services__span services-main translatable" data-key="date">Sana:</span>
+                                            <time class="services__time" datetime="2024-06-22">22.05.2024</time>
+                                        </div>
+                                        <div class="services__wrapper">
+                                            <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
+                                            <div class="d-flex align-items-center column-gap-1">
+                                                <p class="services__text">Neo Art</p>
+                                                <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
+                                            </div>
+                                        </div>
+                                        <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <video class="services__video" controls>
+                                            <source src="./assets/videos/kortejUz.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="services__item">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" srcset="./assets/images/yakkasaroy.webp" class="yakkasaroy hall" width="575" height="200">
+                                            <img class="services__img" src="./assets/images/yakkasaroy-mob.webp" alt="yakkasaroy hall mob" width="360" height="160">
+                                        </picture>
+                                        <h3 class="services__inner-title translatable" data-key="servicesYakkasaroy">Yakkasaroy To'yxona</h3>
+                                        <div class="services__date-wrapper">
+                                            <span class="services__span services-main translatable" data-key="date">Sana:</span>
+                                            <time class="services__time" datetime="2020-10-22">22.10.2020</time>
+                                        </div>
+                                        <div class="services__wrapper">
+                                            <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
+                                            <div class="d-flex align-items-center column-gap-1">
+                                                <p class="services__text">Neo Art</p>
+                                                <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
+                                            </div>
+                                        </div>
+                                        <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <video class="services__video" controls>
+                                            <source src="" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="services__item">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" srcset="./assets/images/versal.webp" class="versal hall" width="575" height="200">
+                                            <img class="services__img" src="./assets/images/versal-mob.webp" alt="versal hall mobile" width="360" height="160">
+                                        </picture>
+                                        <h3 class="services__inner-title translatable" data-key="servicesVersal">Versal To'yxona</h3>
+                                        <div class="services__date-wrapper">
+                                            <span class="services__span services-main translatable" data-key="date">Sana:</span>
+                                            <time class="services__time" datetime="2019-07-12">12.07.2019</time>
+                                        </div>
+                                        <div class="services__wrapper">
+                                            <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
+                                            <div class="d-flex align-items-center column-gap-1">
+                                                <p class="services__text">Neo Art</p>
+                                                <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
+                                            </div>
+                                        </div>
+                                        <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <video class="services__video" controls>
+                                            <source src="" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="services__item">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" srcset="./assets/images/mumtoz.webp" class="mumtoz hall" width="575" height="200">
+                                            <img class="services__img" src="./assets/images/mumtoz-mob.webp" alt="mumtoz hall mob" width="360" height="160">
+                                        </picture>
+                                        <h3 class="services__inner-title translatable" data-key="servicesMumtoz">Mumtoz To'yxona</h3>
+                                        <div class="services__date-wrapper">
+                                            <span class="services__span services-main translatable" data-key="date">Sana:</span>
+                                            <time class="services__time" datetime="2024-01-09">09.01.2024</time>
+                                        </div>
+                                        <div class="services__wrapper">
+                                            <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
+                                            <div class="d-flex align-items-center column-gap-1">
+                                                <p class="services__text">Neo Art</p>
+                                                <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
+                                            </div>
+                                        </div>
+                                        <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <video class="services__video" controls>
+                                            <source src="" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Singers start -->
+            <section class="singers">
+                <div class="container">
+                    <h1 class="visually-hidden">Singers section</h1>
+                    <h2 class="singers__title section-title translatable" data-key="singersTitle">
+                        Mashhur Sanatkorlar va Boshlovchilar
+                    </h2>
+                    <ul class="singers__list" id="singersList">
+                        <li class="singers__item" data-tilt data-tilt-glare>
+                            <img class="singers__img" src="./assets/images/jahongir.webp" alt="Jahongir Otajonov" width="280" height="270">
+                            <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameF">
+                                Jahongir Otajonov
+                            </h3>
+                            <div class="singers__price-wrapper services__date-wrapper">
+                                <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
+                                <span class="singers__number services__time">3.500$</span>
+                            </div>
+                            <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
+                        </li>
+                        <li class="singers__item" data-tilt data-tilt-glare>
+                            <img class="singers__img" src="./assets/images/dj.webp" alt="Dj Piligrim mob" width="280" height="270">
+                            <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameDj">
+                                Dj Piligrim
+                            </h3>
+                            <div class="singers__price-wrapper services__date-wrapper">
+                                <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
+                                <span class="singers__number services__time">3.500$</span>
+                            </div>
+                            <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
+                        </li>
+                        <li class="singers__item" data-tilt data-tilt-glare>
+                            <img class="singers__img" src="./assets/images/rashid.webp" alt="Rashid Holiqov mob" width="280" height="270">
+                            <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameRashid">
+                                Rashid Holiqov
+                            </h3>
+                            <div class="singers__price-wrapper services__date-wrapper">
+                                <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
+                                <span class="singers__number services__time">1.500$</span>
+                            </div>
+                            <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
+                        </li>
+                        <li class="singers__item" data-tilt data-tilt-glare>
+                            <img class="singers__img" src="./assets/images/hamdam.webp" alt="Hamdam Sobirov" width="280" height="270">
+                            <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameHamdam">
+                                Hamdam Sobirov
+                            </h3>
+                            <div class="singers__price-wrapper services__date-wrapper">
+                                <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
+                                <span class="singers__number services__time">1000$</span>
+                            </div>
+                            <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
+                        </li>
+                        <li class="singers__item" data-tilt data-tilt-glare>
+                            <img class="singers__img" src="./assets/images/imron.webp" alt="Imron" width="280" height="270">
+                            <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameImron">
+                                Imron
+                            </h3>
+                            <div class="singers__price-wrapper services__date-wrapper">
+                                <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
+                                <span class="singers__number services__time">800$</span>
+                            </div>
+                            <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
+                        </li>
+                        <li class="singers__item" data-tilt data-tilt-glare>
+                            <img class="singers__img" src="./assets/images/xon.webp" alt="Shohruhxon" width="280" height="270">
+                            <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameShohruhxon">
+                                Shohruhxon
+                            </h3>
+                            <div class="singers__price-wrapper services__date-wrapper">
+                                <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
+                                <span class="singers__number services__time">800$</span>
+                            </div>
+                            <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
+                        </li>
+                        <li class="singers__item" data-tilt data-tilt-glare>
+                            <img class="singers__img" src="./assets/images/ulug.webp" alt="Ulug'bek" width="280" height="270">
+                            <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameUlugbek">
+                                Ulug'bek Rahmatullayev
+                            </h3>
+                            <div class="singers__price-wrapper services__date-wrapper">
+                                <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
+                                <span class="singers__number services__time">700$</span>
+                            </div>
+                            <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
+                        </li>
+                        <li class="singers__item" data-tilt data-tilt-glare>
+                            <img class="singers__img" src="./assets/images/sahar.webp" alt="Sahar" width="280" height="270">
+                            <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameSahar">
+                                Sahar
+                            </h3>
+                            <div class="singers__price-wrapper services__date-wrapper">
+                                <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
+                                <span class="singers__number services__time">600$</span>
+                            </div>
+                            <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
+                        </li>
+                        <li class="singers__item" data-tilt data-tilt-glare>
+                            <img class="singers__img" src="./assets/images/yorqin.webp" alt="Umarov" width="280" height="270">
+                            <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameUmarov">
+                                Yorqinxo'ja Umarov
+                            </h3>
+                            <div class="singers__price-wrapper services__date-wrapper">
+                                <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
+                                <span class="singers__number services__time">500$</span>
+                            </div>
+                            <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
+                        </li>
+                        <li class="singers__item" data-tilt data-tilt-glare>
+                            <img class="singers__img" src="./assets/images/sevara.webp" alt="Sevara" width="280" height="270">
+                            <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameSevara">
+                                Sevara Nazarxon
+                            </h3>
+                            <div class="singers__price-wrapper services__date-wrapper">
+                                <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
+                                <span class="singers__number services__time">2.500$</span>
+                            </div>
+                            <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
+                        </li>
+                    </ul>
+                    <div class="singers__btn-controller">
+                        <button class="singers__prev" aria-label="Prev">
+                            <img src="./assets/images/left-btn.svg" alt="left icon" width="25" height="25">
+                        </button>
+                        <button class="singers__next" aria-label="Next">
+                            <img src="./assets/images/right-btn.svg" alt="right icon" width="25" height="25">
+                        </button>
                     </div>
                 </div>
-            </div>
-        </article>
-        <!-- Site Article finish -->
-
-        <!-- Video -->
-        <section class="video">
-            <div class="container">
-                <h1 class="visually-hidden">Video Section</h1>
-                <h2 class="video__title section-title translatable" data-key="videoTitle">To'ylarimizdan Ajoyib Lavhalar</h2>
-                    <video class="video__self" controls>
-                        <source src="./assets/videos/xxx.mp4" type="video/mp4">
-                    </video>
-            </div>
-        </section>
-        <!-- Video -->
-
-        <!-- Services start -->
-        <section class="services">
-            <div class="container">
-                <h1 class="visually-hidden">Service section</h1>
-                <h2 class="services__title section-title translatable" data-key="servicesTitle">
-                    Servislar Haqida
-                </h2>
-                <ul class="services__list">
-                    <li class="services__item">
-                        <picture>
-                            <!-- <source media="(min-width: 1200px)" srcset="./assets/images/shohsaroy.webp" class="shohsaroy hall" widt="580" height="200"> -->
-                            <img class="services__img" src="./assets/images/shohsaroy-mob.webp" alt="shohsaroy hall mob" width="362" height="160">
-                        </picture>
-                        <h3 class="services__inner-title translatable" data-key="servicesShohsaroy">
-                            Shohsaroy To'yxona
-                        </h3>
-                        <div class="services__date-wrapper">
-                            <span class="services__span services-main translatable" data-key="date">Sana:</span>
-                            <time class="services__time" datetime="2024-06-22">22.05.2024</time>
-                        </div>
-                        <div class="services__wrapper">
-                            <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
-                            <div class="d-flex align-items-center column-gap-1">
-                                <p class="services__text">Neo Art</p>
-                                <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
-                            </div>
-                        </div>
-                        <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
-                    </li>
-                    <li class="services__item">
-                        <picture>
-                            <!-- <source media="(min-width: 1200px)" srcset="./assets/images/yakkasaroy.webp" class="yakkasaroy hall" widt="580" height="200"> -->
-                            <img class="services__img" src="./assets/images/yakkasaroy-mob.webp" alt="yakkasaroy hall mob" width="360" height="160">
-                        </picture>
-                        <h3 class="services__inner-title translatable" data-key="servicesYakkasaroy">
-                            Yakkasaroy To'yxona
-                        </h3>
-                        <div class="services__date-wrapper">
-                            <span class="services__span services-main translatable" data-key="date">Sana:</span>
-                            <time class="services__time" datetime="2020-10-22">22.10.2020</time>
-                        </div>
-                        <div class="services__wrapper">
-                            <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
-                            <div class="d-flex align-items-center column-gap-1">
-                                <p class="services__text">Neo Art</p>
-                                <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
-                            </div>
-                        </div>
-                        <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
-                    </li>
-                    <li class="services__item">
-                        <picture>
-                            <!-- <source media="(min-width: 1200px)" srcset="./assets/images/versal.webp" class="versal hall" widt="580" height="200"> -->
-                            <img class="services__img" src="./assets/images/versal-mob.webp" alt="versal hall mobile" width="360" height="160">
-                        </picture>
-                        <h3 class="services__inner-title translatable" data-key="servicesVersal">
-                            Versal To'yxona
-                        </h3>
-                        <div class="services__date-wrapper">
-                            <span class="services__span services-main translatable" data-key="date">Sana:</span>
-                            <time class="services__time" datetime="2019-07-12">12.07.2019</time>
-                        </div>
-                        <div class="services__wrapper">
-                            <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
-                            <div class="d-flex align-items-center column-gap-1">
-                                <p class="services__text">Neo Art</p>
-                                <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
-                            </div>
-                        </div>
-                        <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
-                    </li>
-                    <li class="services__item">
-                        <picture>
-                            <!-- <source media="(min-width: 1200px)" srcset="./assets/images/mumtoz.webp" class="mumtoz hall" widt="580" height="200"> -->
-                            <img class="services__img" src="./assets/images/mumtoz-mob.webp" alt="mumtoz hall mob" width="360" height="160">
-                        </picture>
-                        <h3 class="services__inner-title translatable" data-key="servicesMumtoz">
-                            Mumtoz To'yxona
-                        </h3>
-                        <div class="services__date-wrapper">
-                            <span class="services__span services-main translatable" data-key="date">Sana:</span>
-                            <time class="services__time" datetime="2024-01-09">09.01.2022</time>
-                        </div>
-                        <div class="services__wrapper">
-                            <span class="services__org services-main translatable" data-key="organisation">Organizatsiya:</span>
-                            <div class="d-flex align-items-center column-gap-1">
-                                <p class="services__text">Neo Art</p>
-                                <img src="./assets/images/card-logo.webp" alt="site mobile logo" width="20" height="20">
-                            </div>
-                        </div>
-                        <button class="services__btn translatable" data-key="servicesButton">Batafsil</button>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!-- Services finish -->
-
-        <!-- Singers start -->
-        <section class="singers">
-            <div class="container">
-                <h1 class="visually-hidden">Singers section</h1>
-                <h2 class="singers__title section-title translatable" data-key="singersTitle">
-                    Mashhur Sanatkorlar va Boshlovchilar
-                </h2>
-                <ul class="singers__list" id="singersList">
-                    <li class="singers__item">
-                        <img class="singers__img" src="./assets/images/jahongir.webp" alt="Jahongir Otajonov" width="280" height="270">
-                        <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameF">
-                            Jahongir Otajonov
-                        </h3>
-                        <div class="singers__price-wrapper services__date-wrapper">
-                            <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-                            <span class="singers__number services__time">3.500$</span>
-                        </div>
-                        <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
-                    </li>
-                    <li class="singers__item">
-                        <img class="singers__img" src="./assets/images/dj.webp" alt="Dj Piligrim mob" width="280" height="270">
-                        <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameDj">
-                            Dj Piligrim
-                        </h3>
-                        <div class="singers__price-wrapper services__date-wrapper">
-                            <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-                            <span class="singers__number services__time">3.500$</span>
-                        </div>
-                        <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
-                    </li>
-                    <li class="singers__item">
-                        <img class="singers__img" src="./assets/images/rashid.webp" alt="Rashid Holiqov mob" width="280" height="270">
-                        <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameRashid">
-                            Rashid Holiqov
-                        </h3>
-                        <div class="singers__price-wrapper services__date-wrapper">
-                            <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-                            <span class="singers__number services__time">1.500$</span>
-                        </div>
-                        <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
-                    </li>
-                    <li class="singers__item">
-                        <img class="singers__img" src="./assets/images/hamdam.webp" alt="Hamdam Sobirov" width="280" height="270">
-                        <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameHamdam">
-                            Hamdam Sobirov
-                        </h3>
-                        <div class="singers__price-wrapper services__date-wrapper">
-                            <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-                            <span class="singers__number services__time">1000$</span>
-                        </div>
-                        <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
-                    </li>
-                    <li class="singers__item">
-                        <img class="singers__img" src="./assets/images/imron.webp" alt="Imron" width="280" height="270">
-                        <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameImron">
-                            Imron
-                        </h3>
-                        <div class="singers__price-wrapper services__date-wrapper">
-                            <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-                            <span class="singers__number services__time">800$</span>
-                        </div>
-                        <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
-                    </li>
-                    <li class="singers__item">
-                        <img class="singers__img" src="./assets/images/xon.webp" alt="Shohruhxon" width="280" height="270">
-                        <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameShohruhxon">
-                            Shohruhxon
-                        </h3>
-                        <div class="singers__price-wrapper services__date-wrapper">
-                            <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-                            <span class="singers__number services__time">800$</span>
-                        </div>
-                        <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
-                    </li>
-                    <li class="singers__item">
-                        <img class="singers__img" src="./assets/images/ulug.webp" alt="Ulug'bek" width="280" height="270">
-                        <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameUlugbek">
-                            Ulug'bek Rahmatullayev
-                        </h3>
-                        <div class="singers__price-wrapper services__date-wrapper">
-                            <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-                            <span class="singers__number services__time">700$</span>
-                        </div>
-                        <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
-                    </li>
-                    <li class="singers__item">
-                        <img class="singers__img" src="./assets/images/sahar.webp" alt="Sahar" width="280" height="270">
-                        <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameSahar">
-                            Sahar
-                        </h3>
-                        <div class="singers__price-wrapper services__date-wrapper">
-                            <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-                            <span class="singers__number services__time">600$</span>
-                        </div>
-                        <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
-                    </li>
-                    <li class="singers__item">
-                        <img class="singers__img" src="./assets/images/yorqin.webp" alt="Umarov" width="280" height="270">
-                        <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameUmarov">
-                            Yorqinxo'ja Umarov
-                        </h3>
-                        <div class="singers__price-wrapper services__date-wrapper">
-                            <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-                            <span class="singers__number services__time">500$</span>
-                        </div>
-                        <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
-                    </li>
-                    <li class="singers__item">
-                        <img class="singers__img" src="./assets/images/sevara.webp" alt="Sevara" width="280" height="270">
-                        <h3 class="singers__inner-title services__inner-title translatable" data-key="singersNameSevara">
-                            Sevara Nazarxon
-                        </h3>
-                        <div class="singers__price-wrapper services__date-wrapper">
-                            <span class="singers__price services-main translatable" data-key="singersPrice">Narx:</span>
-                            <span class="singers__number services__time">2.500$</span>
-                        </div>
-                        <a class="singers__btn services__btn translatable" href="./singers.html" data-key="servicesButton">Batafsil</a>
-                    </li>
-                </ul>
-                <div class="singers__btn-controller">
-                    <button class="singers__prev" aria-label="Prev">
-                        <img src="./assets/images/left-btn.svg" alt="left icon" width="25" height="25">
-                    </button>
-                    <button class="singers__next" aria-label="Next">
-                        <img src="./assets/images/right-btn.svg" alt="right icon" width="25" height="25">
-                    </button>
-                </div>
-            </div>
-        </section>
-        <!-- Singers finish -->
+            </section>
+            <!-- Singers finish -->
     </main>
 
     <!--   Footer start   -->
     <footer class="site-footer">
-        <div class="container">
-            <div class="site-footer__wrapper">
-                <a href="./index.html">
-                    <img class="footer-logo" src="./assets/images/logo.svg" alt="footer logo" width="55" height="55">
-                </a>
-                <div class="site-footer__list-wrapper">
-                    <ul class="site-footer__list">
-                        <li class="site-footer__item">
-                            <a class="site-footer__link translatable" data-key="home" href="./index.html">
-                                Bosh Sahifa
-                            </a></li>
-                        <li class="site-footer__item">
-                            <a class="site-footer__link translatable" data-key="about" href="#">
-                                Biz Haqimizda
-                            </a></li>
-                        <li class="site-footer__item">
-                            <a class="site-footer__link translatable" data-key="services" href="#">
-                                Servislar
-                            </a></li>
-                        <li class="site-footer__item">
-                            <a class="site-footer__link translatable" data-key="contact" href="#">
-                                Kontaktlar
-                            </a></li>
-                    </ul>
-                    <ul class="site-footer__list">
-                        <li class="site-footer__item">
-                            <a class="site-footer__link translatable" data-key="singers" href="./singers.html">
-                                Sanatkorlar
-                            </a></li>
-                        <li class="site-footer__item">
-                            <a class="site-footer__link translatable" data-key="single" href="./controller.html">
-                                Boshlovchilar
-                            </a></li>
-                        <li class="site-footer__item">
-                            <a class="site-footer__link translatable" data-key="groups" href="./groups.html">
-                                Guruhlar
-                            </a></li>
-                    </ul>
-                </div>
-                <div class="site-footer__inner">
-                    <div class="site-footer__socials">
-                        <a href="https://www.instagram.com/neoart_wedding" target="_blank"><img src="./assets/images/Instagram.webp" alt="instagram" width="24" height="24"></a>
-                        <a href="https://www.telegram.com/yourusername" target="_blank"><img src="./assets/images/Telegram-App.webp" alt="telegram" width="24" height="24"></a>
-                        <a href="https://www.facebook.com/yourusername" target="_blank"><img src="./assets/images/Facebook-F.webp" alt="facebook" width="24" height="24"></a>
-                        <a href="https://www.youtube.com/yourusername" target="_blank"><img src="./assets/images/YouTube.webp" alt="youtube" width="24" height="24"></a>
+            <div class="container">
+                <div class="site-footer__wrapper">
+                    <a href="./index.html">
+                        <img class="footer-logo" src="./assets/images/logo.svg" alt="footer logo" width="55" height="55">
+                    </a>
+                    <div class="site-footer__list-wrapper">
+                        <ul class="site-footer__list">
+                            <li class="site-footer__item">
+                                <a class="site-footer__link translatable" data-key="home" href="./index.html">
+                                    Bosh Sahifa
+                                </a></li>
+                            <li class="site-footer__item">
+                                <a class="site-footer__link translatable" data-key="about" href="#">
+                                    Biz Haqimizda
+                                </a></li>
+                            <li class="site-footer__item">
+                                <a class="site-footer__link translatable" data-key="services" href="#">
+                                    Servislar
+                                </a></li>
+                            <li class="site-footer__item">
+                                <a class="site-footer__link translatable" data-key="contact" href="#">
+                                    Kontaktlar
+                                </a></li>
+                        </ul>
+                        <ul class="site-footer__list">
+                            <li class="site-footer__item">
+                                <a class="site-footer__link translatable" data-key="singers" href="./singers.html">
+                                    Sanatkorlar
+                                </a></li>
+                            <li class="site-footer__item">
+                                <a class="site-footer__link translatable" data-key="single" href="./controller.html">
+                                    Boshlovchilar
+                                </a></li>
+                            <li class="site-footer__item">
+                                <a class="site-footer__link translatable" data-key="groups" href="./groups.html">
+                                    Guruhlar
+                                </a></li>
+                        </ul>
                     </div>
-                    <div class="site-footer__main d-flex flex-column column-gap-1">
-                        <a class="site-footer__number" href="tel:+998949301111">
-                            +998 (94) 930-11-11
-                        </a>
-                        <a class="site-footer__number" href="tel:+998931274444">
-                            +998 (93) 127-44-44
-                        </a>
-                        <div class="site-footer__last d-flex align-items-center">
-                            <img src="./assets/images/location.svg" alt="location pin">
-                            <span class="site-footer__location translatable" data-key="location">
-                                Uzbekistan, Tashkent
-                            </span>
+                    <div class="site-footer__inner">
+                        <div class="site-footer__socials">
+                            <a href="https://www.instagram.com/neoart_wedding" target="_blank"><img src="./assets/images/Instagram.webp" alt="instagram" width="24" height="24"></a>
+                            <a href="https://www.telegram.com/yourusername" target="_blank"><img src="./assets/images/Telegram-App.webp" alt="telegram" width="24" height="24"></a>
+                            <a href="https://www.facebook.com/" target="_blank"><img src="./assets/images/Facebook-F.webp" alt="facebook" width="24" height="24"></a>
+                            <a href="https://www.youtube.com/yourusername" target="_blank"><img src="./assets/images/YouTube.webp" alt="youtube" width="24" height="24"></a>
+                        </div>
+                        <div class="site-footer__main d-flex flex-column column-gap-1">
+                            <a class="site-footer__number" href="tel:+998949301111">
+                                +998 (94) 930-11-11
+                            </a>
+                            <a class="site-footer__number" href="tel:+998931274444">
+                                +998 (93) 127-44-44
+                            </a>
+                            <div class="site-footer__last d-flex align-items-center">
+                                <img src="./assets/images/location.svg" alt="location pin">
+                                <span class="site-footer__location translatable" data-key="location">
+                                    Uzbekistan, Tashkent
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </footer>
     <!--   Footer finish   -->
     
+    <script src="./js/vanilla-tilt.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

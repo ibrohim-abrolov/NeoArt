@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <div id="preloader"></div>
     
     <!--   Header start   -->
     <header class="site-header">
@@ -35,7 +36,14 @@
                     <ul class="nav__list">
                         <li class="nav__item"><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
                         <li class="nav__item"><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
-                        <li class="nav__item"><a class="nav__link" data-key="services" href="./singers.html">Servislar</a></li>
+                        <li class="nav__item dropdown">
+                            <a class="nav__link dropdown-toggle" data-key="services" href="#" id="navbarDropdown" role="button">Servislar</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item translatable" data-key="singers" href="./singers.html">Sanatkorlar</a>
+                                <a class="dropdown-item translatable" data-key="single" href="./controller.html">Boshlovchilar</a>
+                                <a class="dropdown-item translatable" data-key="groups" href="./groups.html">Guruhlar</a>
+                            </div>
+                        </li>
                         <li class="nav__item"><a class="nav__link" data-key="contact" href="tel:+998931274444">Kontakt</a></li>
                     </ul>
                 </nav>

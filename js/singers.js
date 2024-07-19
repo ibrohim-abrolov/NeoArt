@@ -1,3 +1,38 @@
+//Create a script element to load the YouTube API asynchronously
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        document.getElementById("preloader").style.display = "none";
+    }, 2000); 
+});
+
+
+// Dropdown
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.dropdown-toggle').forEach(dropdownToggle => {
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            const dropdownMenu = dropdownToggle.nextElementSibling;
+            dropdownMenu.classList.toggle('show');
+        });
+    });
+
+    // Close the dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('.dropdown-toggle')) {
+            document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                menu.classList.remove('show');
+            });
+        }
+    });
+});
+
+
+document.querySelectorAll('.services__item').forEach(item => {
+    item.addEventListener('click', function() {
+        this.classList.toggle('flipped');
+    });
+});
+
 
 // Modal
 document.addEventListener('DOMContentLoaded', function() {
@@ -231,14 +266,31 @@ function setLanguage(language) {
 
     languageSelect.value = language;
 }
-
 languageSelect.addEventListener('change', function() {
     const selectedLanguage = this.value;
     setLanguage(selectedLanguage);
     localStorage.setItem('selectedLanguage', selectedLanguage);
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'uzb';
     setLanguage(savedLanguage);
+});
+
+
+// Function to handle smooth scrolling to a specific element
+function scrollToElement(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+document.querySelectorAll('.cards__link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+
+        const targetId = this.getAttribute('href').substring(1); // Remove '#' from href
+
+        scrollToElement(targetId);
+    });
 });

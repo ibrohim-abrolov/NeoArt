@@ -1,3 +1,11 @@
+//Create a script element to load the YouTube API asynchronously
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        document.getElementById("preloader").style.display = "none";
+    }, 2000); // 4 seconds
+});
+
+
 // Dropdown
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.dropdown-toggle').forEach(dropdownToggle => {
@@ -18,6 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+document.querySelectorAll('.services__item').forEach(item => {
+    item.addEventListener('click', function() {
+        this.classList.toggle('flipped');
+    });
+});
 
 
 // Modal
@@ -76,7 +90,7 @@ const translations = {
         founder: "Asoschi:",
         userName: "Samandar Ahmedjanov",
         servicesTitle: "Servislar Haqida",
-        servicesShohsaroy: "Shohsaroy To'yxona",
+        servicesKortej: "Kortej Hizmati",
         servicesYakkasaroy: "Yakkasaroy To'yxona",
         servicesVersal: "Versal To'yxona",
         servicesMumtoz: "Mumtoz To'yxona",
@@ -117,7 +131,7 @@ const translations = {
         founder: "Основатель:",
         userName: "Самандар Ахмеджанов",
         servicesTitle: "Об услугах",
-        servicesShohsaroy: "Свадебный зал Шахсарай",
+        servicesKortej: "Кортеж Услуга",
         servicesYakkasaroy: "Свадебный зал Яккасарой",
         servicesVersal: "Свадебный зал Версал",
         servicesMumtoz: "Свадебный зал Мумтоз",
@@ -145,7 +159,6 @@ const translations = {
 };
 
 const languageSelect = document.getElementById('languageSelect');
-
 function setLanguage(language) {
     const translation = translations[language];
 
@@ -268,4 +281,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the first page
     showPage(currentPage);
 });
-

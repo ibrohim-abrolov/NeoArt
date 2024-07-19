@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <div id="preloader"></div>
     
     <!--   Header start   -->
     <header class="site-header">
@@ -35,7 +36,14 @@
                     <ul class="nav__list">
                         <li class="nav__item"><a class="nav__link" data-key="home" href="./index.html">Bosh Sahifa</a></li>
                         <li class="nav__item"><a class="nav__link" data-key="about" href="#">Biz Haqimizda</a></li>
-                        <li class="nav__item"><a class="nav__link" data-key="services" href="./singers.html">Servislar</a></li>
+                        <li class="nav__item dropdown">
+                            <a class="nav__link dropdown-toggle" data-key="services" href="#" id="navbarDropdown" role="button">Servislar</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item translatable" data-key="singers" href="./singers.html">Sanatkorlar</a>
+                                <a class="dropdown-item translatable" data-key="single" href="./controller.html">Boshlovchilar</a>
+                                <a class="dropdown-item translatable" data-key="groups" href="./groups.html">Guruhlar</a>
+                            </div>
+                        </li>
                         <li class="nav__item"><a class="nav__link" data-key="contact" href="tel:+998931274444">Kontakt</a></li>
                     </ul>
                 </nav>
@@ -66,79 +74,79 @@
                 <div class="cards__wrapper">
                     <ul class="cards__list">
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="jahongir" href="#">Jahongir Otajonov</a>
+                            <a class="cards__link translatable" data-key="jahongir" href="#jahongir">Jahongir Otajonov</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="piligrim" href="#">Dj Piligrim</a>
+                            <a class="cards__link translatable" data-key="piligrim" href="#dj">Dj Piligrim</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="rashid" href="#">Rashid Holiqov</a>
+                            <a class="cards__link translatable" data-key="rashid" href="#rashid">Rashid Holiqov</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="hamdam" href="#">Hamdam Sobirov</a>
+                            <a class="cards__link translatable" data-key="hamdam" href="#hamdam">Hamdam Sobirov</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="imron" href="#">Imron</a>
+                            <a class="cards__link translatable" data-key="imron" href="#imron">Imron</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="shohruhxon" href="#">Shohruhxon</a>
-                        </li>
-                    </ul>
-                    <ul class="cards__list">
-                        <li class="cards__item">
-                            <a class="cards__link translatable" data-key="ulug" href="#">Ulug’bek Rahmatullayev</a>
-                        </li>
-                        <li class="cards__item">
-                            <a class="cards__link translatable" data-key="sahar" href="#">Sahar</a>
-                        </li>
-                        <li class="cards__item">
-                            <a class="cards__link translatable" data-key="yorqin" href="#">Yorqinxoja Umarov</a>
-                        </li>
-                        <li class="cards__item">
-                            <a class="cards__link translatable" data-key="sevara" href="#">Sevara Nazarxon</a>
-                        </li>
-                        <li class="cards__item">
-                            <a class="cards__link translatable" data-key="yulduz" href="#">Yulduz Usmonova</a>
-                        </li>
-                        <li class="cards__item">
-                            <a class="cards__link translatable" data-key="nasiba" href="#">Nasiba Abdullayeva</a>
+                            <a class="cards__link translatable" data-key="shohruhxon" href="#xon">Shohruhxon</a>
                         </li>
                     </ul>
                     <ul class="cards__list">
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="ozoda" href="#">Ozoda Nursaidova</a>
+                            <a class="cards__link translatable" data-key="ulug" href="#ulug">Ulug’bek Rahmatullayev</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="lola" href="#">Lola</a>
+                            <a class="cards__link translatable" data-key="sahar" href="#sahar">Sahar</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="rayhon" href="#">Rayhon Ganieva</a>
+                            <a class="cards__link translatable" data-key="yorqin" href="#yorqin">Yorqinxoja Umarov</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="jasmin" href="#">Jasmin</a>
+                            <a class="cards__link translatable" data-key="sevara" href="#sevara">Sevara Nazarxon</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="nilufar" href="#">Nilufar Usmonova</a>
+                            <a class="cards__link translatable" data-key="yulduz" href="#yulduz">Yulduz Usmonova</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="ziyoda" href="#">Ziyoda</a>
+                            <a class="cards__link translatable" data-key="nasiba" href="#nasiba">Nasiba Abdullayeva</a>
                         </li>
                     </ul>
                     <ul class="cards__list">
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="mavluda" href="#">Mavluda Asalxojayeva</a>
+                            <a class="cards__link translatable" data-key="ozoda" href="#ozoda">Ozoda Nursaidova</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="milena" href="#">Milena Madmusayeva</a>
+                            <a class="cards__link translatable" data-key="lola" href="#lola">Lola</a>
                         </li>
                         <li class="cards__item">
-                            <a class="cards__link translatable" data-key="dilnoza" href="#">Dilnoza</a>
+                            <a class="cards__link translatable" data-key="rayhon" href="#rayhon">Rayhon Ganieva</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="jasmin" href="#jasmin">Jasmin</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="nilufar" href="#nilufar">Nilufar Usmonova</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="ziyoda" href="#ziyoda">Ziyoda</a>
+                        </li>
+                    </ul>
+                    <ul class="cards__list">
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="mavluda" href="#mavluda">Mavluda Asalxojayeva</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="milena" href="#milena">Milena Madmusayeva</a>
+                        </li>
+                        <li class="cards__item">
+                            <a class="cards__link translatable" data-key="dilnoza" href="#dilnoza">Dilnoza</a>
                         </li>
                     </ul>
                 </div>
                 <div class="cards__bottom">
                     <ul class="cards__inner-list">
-                        <li class="cards__inner-item">
+                        <li id="jahongir" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/jahongir.webp" alt="image of jahongir otajonov">
                                 <div class="cards__main">
@@ -167,7 +175,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="dj" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/dj.webp" alt="image of dj piligrim">
                                 <div class="cards__main">
@@ -196,7 +204,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="rashid" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/rashid.webp" alt="image of rashid xoliqov">
                                 <div class="cards__main">
@@ -225,7 +233,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="hamdam" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/hamdam.webp" alt="image of Hamdam Sobirov">
                                 <div class="cards__main">
@@ -254,7 +262,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="imron" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/imron.webp" alt="image of Imron">
                                 <div class="cards__main">
@@ -283,7 +291,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="xon" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/xon.webp" alt="image of Shohruhxon">
                                 <div class="cards__main">
@@ -312,7 +320,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="ulug" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/ulug.webp" alt="image of Ulug’bek Rahmatullayev">
                                 <div class="cards__main">
@@ -341,7 +349,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="sahar" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/sahar.webp" alt="image of Sahar">
                                 <div class="cards__main">
@@ -370,7 +378,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="yorqin" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/yorqin.webp" alt="image of Umarov">
                                 <div class="cards__main">
@@ -399,7 +407,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="sevara" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/sevara.webp" alt="image of Sevara">
                                 <div class="cards__main">
@@ -428,7 +436,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="yulduz" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/yulduz.webp" alt="image of Usmonova">
                                 <div class="cards__main">
@@ -457,7 +465,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="nasiba" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/nasiba.webp" alt="image of Nasiba">
                                 <div class="cards__main">
@@ -486,7 +494,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="ozoda" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/ozoda.webp" alt="image of Ozoda">
                                 <div class="cards__main">
@@ -515,7 +523,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="lola" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/lola.webp" alt="image of Lola">
                                 <div class="cards__main">
@@ -544,7 +552,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="rayhon" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/rayhon.webp" alt="image of Rayhon">
                                 <div class="cards__main">
@@ -573,7 +581,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="jasmin" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/jasmin.webp" alt="image of Jasmin">
                                 <div class="cards__main">
@@ -602,7 +610,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="nilufar" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/nilufar.webp" alt="image of Usmonova">
                                 <div class="cards__main">
@@ -631,7 +639,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="ziyoda" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/ziyoda.webp" alt="image of Ziyoda">
                                 <div class="cards__main">
@@ -660,7 +668,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="mavluda" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/mavluda.webp" alt="image of Mavluda">
                                 <div class="cards__main">
@@ -689,7 +697,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="milena" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/milena.webp" alt="image of Milena">
                                 <div class="cards__main">
@@ -718,7 +726,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cards__inner-item">
+                        <li id="dilnoza" class="cards__inner-item">
                             <div class="cards__inner-wrapper">
                                 <img class="cards__img" src="./assets/images/dilnoz.webp" alt="image of Dilnoza">
                                 <div class="cards__main">
